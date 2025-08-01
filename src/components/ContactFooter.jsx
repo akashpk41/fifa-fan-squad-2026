@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Send, Users, Award, Shield, Zap, Star, Clock, Globe, Heart } from 'lucide-react';
+import Stats from './Stats';
 
 const ContactFooter = () => {
   const [email, setEmail] = useState('');
@@ -30,7 +31,7 @@ const ContactFooter = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 overflow-hidden">
+    <div className="relative mt-10 min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 overflow-hidden">
       {/* Dynamic Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent"></div>
@@ -51,7 +52,7 @@ const ContactFooter = () => {
           top: mousePosition.y - 192,
         }}
       ></div>
-
+<Stats />
       {/* Newsletter Section */}
       <div className="relative z-10 pt-16 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -83,7 +84,7 @@ const ContactFooter = () => {
               </div>
               <button
                 onClick={handleNewsletterSubmit}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2 whitespace-nowrap"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer"
               >
                 Subscribe Now
                 <Send className="w-4 h-4" />
@@ -171,7 +172,7 @@ const ContactFooter = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+              <div className="grid  grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                 {[
                   { icon: Users, number: "500+", label: "Happy Clients", color: "text-blue-600" },
                   { icon: Award, number: "50+", label: "Awards Won", color: "text-indigo-600" },
@@ -200,7 +201,7 @@ const ContactFooter = () => {
                     <label className="block text-sm font-medium text-slate-700 mb-2">First Name</label>
                     <input
                       type="text"
-                      placeholder="John"
+                      placeholder="Tom"
                       className="w-full px-4 py-4 bg-white/80 border border-slate-200 rounded-xl text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 backdrop-blur-sm transition-all duration-300 group-hover:shadow-md"
                     />
                   </div>
@@ -208,7 +209,7 @@ const ContactFooter = () => {
                     <label className="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
                     <input
                       type="text"
-                      placeholder="Doe"
+                      placeholder="Cruise"
                       className="w-full px-4 py-4 bg-white/80 border border-slate-200 rounded-xl text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 backdrop-blur-sm transition-all duration-300 group-hover:shadow-md"
                     />
                   </div>
@@ -218,7 +219,7 @@ const ContactFooter = () => {
                   <label className="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
                   <input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="tom@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-4 py-4 bg-white/80 border border-slate-200 rounded-xl text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 backdrop-blur-sm transition-all duration-300 group-hover:shadow-md"
@@ -273,7 +274,7 @@ const ContactFooter = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-800">YourBrand</h3>
+                <h3 className="text-2xl font-bold text-slate-800">Dream 11</h3>
               </div>
               <p className="text-slate-600 mb-8 max-w-md mx-auto sm:mx-0 leading-relaxed">
                 We create digital experiences that inspire, engage, and deliver results. Our passionate team is dedicated to bringing your vision to life with innovation and excellence.
@@ -314,7 +315,7 @@ const ContactFooter = () => {
                   className="w-full px-4 py-3 bg-white/80 border border-slate-200 rounded-xl text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 backdrop-blur-sm transition-all duration-300 text-sm"
                 />
                 <button
-                  onClick={() => console.log('Footer newsletter subscription')}
+                  
                   className="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transform hover:scale-105"
                 >
                   Subscribe
@@ -327,7 +328,7 @@ const ContactFooter = () => {
           {/* Bottom Bar */}
           <div className="border-t border-slate-200/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <p className="text-slate-600 text-sm">
-              © 2025 YourBrand. All rights reserved. Made with ❤️ for amazing people.
+              © 2025 Akash PK. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <a href="#" className="text-slate-600 hover:text-blue-600 transition-colors duration-300">Privacy Policy</a>

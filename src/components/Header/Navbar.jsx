@@ -17,8 +17,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 z-50 w-full transition-all duration-500 ${
       scrolled
-        ? 'backdrop-blur-xl bg-white/80 shadow-lg border-b border-white/20'
-        : 'backdrop-blur-md bg-white/60'
+        ? 'backdrop-blur-xl bg-white/10 shadow-lg border-b border-white/20'
+        : 'backdrop-blur-md bg-white/10'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
@@ -58,14 +58,14 @@ const Navbar = () => {
           </div>
 
           {/* Coin Button */}
-          <div className="flex items-center">
-            <button className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 bg-white/60 border border-white/40 rounded-xl hover:bg-white/80 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+          <div className="flex items-center  ">
+            <button className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 bg-white/60 border border-white/40 rounded-xl hover:bg-white/80 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg cursor-pointer">
               <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 0
               </span>
               <div className="flex items-center gap-1 text-orange-600 font-semibold">
                 <span className="text-sm lg:text-base">Coin</span>
-                <DollarSign size={16} />
+                <DollarSign size={18} />
               </div>
             </button>
           </div>
