@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
-const PlayerCard = () => {
+const PlayerCard = ({ coins, setCoins }) => {
   const [players, setPlayers] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -10,6 +11,41 @@ const PlayerCard = () => {
       .then((data) => setPlayers(data))
       .catch((err) => console.error("Fetch failed:", err));
   }, []);
+
+  const handleSelectPlayer = async (player) => {
+    if (coins < player.price) {
+      toast.error(`😢 Not enough coins! Please claim free credit.`, {
+        duration: 3000,
+        style: {
+          border: "1px solid #fca5a5",
+          padding: "16px",
+          color: "#b91c1c",
+          background: "#fef2f2",
+          fontWeight: "500",
+        },
+        iconTheme: {
+          primary: "#ef4444",
+          secondary: "#fecaca",
+        },
+      });
+      return;
+    }
+
+    // fake async operation for toast.promise
+    const fakeSelect = () =>
+      new Promise((resolve) => {
+        setTimeout(() => resolve(), 1000); // simulate delay
+      });
+
+    toast.promise(fakeSelect(), {
+      loading: "Selecting player...",
+      success: `🎉 Congrats! You now own ${player.name}!`,
+      error: "Something went wrong!",
+    });
+
+    setCoins((prev) => prev - player.price);
+    // your additional logic (like marking player as owned)
+  };
 
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-3  gap-8 md:p-6 mt-6">
@@ -93,6 +129,7 @@ const PlayerCard = () => {
               <div className="pt-6 mt-auto">
                 <button
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                  onClick={() => handleSelectPlayer(player)}
                   onTouchStart={(e) => {
                     e.currentTarget.style.transform = "scale(1.05)";
                     e.currentTarget.style.boxShadow =

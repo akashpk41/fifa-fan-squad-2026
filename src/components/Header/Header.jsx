@@ -13,14 +13,15 @@ import toast from "react-hot-toast";
 
 import Navbar from "./Navbar";
 
-const Header = () => {
+const Header = ({ coins, setCoins }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const [coins, setCoin] = useState(0);
+  // const [coins, setCoins] = useState(0);
 
   const handleClaimCredit = () => {
-    const creditCoins = Math.floor(100000 + Math.random() * 900000);
-    setCoin(coins + creditCoins);
+    const creditCoins = Math.floor(1000000 + Math.random() * 9000000);
+
+    setCoins(coins + creditCoins);
 
     toast.success(
       `🎉 Congratulations! You got ${creditCoins.toLocaleString()} coins!`,

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SelectedPlayer from "../SelectedPlayer/SelectedPlayer";
 import PlayerCard from "../PlayerCard/PlayerCard";
 
-const Players = () => {
+const Players = ({ coins, setCoins }) => {
   const [activeTab, setActiveTab] = useState("active");
 
   return (
@@ -41,7 +41,11 @@ const Players = () => {
         </div>
       </div>
 
-      {activeTab === "active" ? <PlayerCard /> : <SelectedPlayer />}
+      {activeTab === "active" ? (
+        <PlayerCard coins={coins} setCoins={setCoins} />
+      ) : (
+        <SelectedPlayer />
+      )}
     </div>
   );
 };
