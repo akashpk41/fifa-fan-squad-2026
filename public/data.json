@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Lionel Messi",
+    "country": "Argentina",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Lionel_Messi_NE_Revolution_Inter_Miami_7.9.25-055.jpg/500px-Lionel_Messi_NE_Revolution_Inter_Miami_7.9.25-055.jpg",
+    "position": "Forward",
+    "foot": "Left-Foot",
+    "price": 2000000
+  },
+  {
+    "name": "Neymar Jr",
+    "country": "Brazil",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Neymar_Jr._with_Al_Hilal%2C_3_October_2023_-_01_%28cropped%29.jpg/375px-Neymar_Jr._with_Al_Hilal%2C_3_October_2023_-_01_%28cropped%29.jpg",
+    "position": "Forward",
+    "foot": "Right-Foot",
+    "price": 1800000
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "country": "Portugal",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/500px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg",
+    "position": "Forward",
+    "foot": "Right-Foot",
+    "price": 1900000
+  },
+
+   {
+    "name": "Alisson Becker",
+    "country": "Brazil",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Alisson_in_2018.jpg/500px-Alisson_in_2018.jpg",
+    "position": "Goalkeeper",
+    "foot": "Right-Foot",
+    "price": 1650000
+  },
+
+  {
+    "name": "Luis Suárez",
+    "country": "Uruguay",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Luis_Su%C3%A1rez_NE_Revolution_Inter_Miami_7.9.25-053_%28cropped%29.jpg/500px-Luis_Su%C3%A1rez_NE_Revolution_Inter_Miami_7.9.25-053_%28cropped%29.jpg",
+    "position": "Striker",
+    "foot": "Right-Foot",
+    "price": 1400000
+  },
+
+  {
+    "name": "Thibaut Courtois",
+    "country": "Belgium",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thibaut_Courtois_WC2022.jpg/500px-Thibaut_Courtois_WC2022.jpg",
+    "position": "Goalkeeper",
+    "foot": "Right-Foot",
+    "price": 1700000
+  },
+  {
+    "name": "Zlatan Ibrahimović",
+    "country": "Sweden",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/Zlatan_Ibrahimovi%C4%87_June_2018.jpg",
+    "position": "Striker",
+    "foot": "Right-Foot",
+    "price": 1300000
+  },
+  {
+    "name": "Romelu Lukaku",
+    "country": "Belgium",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Romelu_Lukaku_2021.jpg/500px-Romelu_Lukaku_2021.jpg",
+    "position": "Striker",
+    "foot": "Left-Foot",
+    "price": 1500000
+  },
+  {
+    "name": "Kylian Mbappé",
+    "country": "France",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Picture_with_Mbapp%C3%A9_%28cropped%29_%28cropped%29.jpg/500px-Picture_with_Mbapp%C3%A9_%28cropped%29_%28cropped%29.jpg",
+    "position": "Forward",
+    "foot": "Right-Foot",
+    "price": 2100000
+  }
+
+
+]

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import AllPlayers from "../AllPlayers/AllPlayers";
 import SelectedPlayer from "../SelectedPlayer/SelectedPlayer";
+import PlayerCard from "../PlayerCard/PlayerCard";
 
 const Players = () => {
-  const [activeTab, setActiveTab] = useState("available");
+  const [activeTab, setActiveTab] = useState("active");
 
   return (
     <div className="max-w-6xl w-11/12 mt-16 mb-24 mx-auto  py-5 px-2 ">
@@ -17,7 +17,7 @@ const Players = () => {
         </h3>
 
         {/* Right side toggle button style */}
-        <div className=" flex   rounded-full border border-gray-300 overflow-hidden">
+        <div className=" flex   rounded-full border border-gray-300 overflow-hidden  ">
           <button
             className={` ${
               activeTab === "active"
@@ -41,7 +41,7 @@ const Players = () => {
         </div>
       </div>
 
-      {activeTab === "active" ? <AllPlayers /> : <SelectedPlayer />}
+      {activeTab === "active" ? <PlayerCard /> : <SelectedPlayer />}
     </div>
   );
 };
