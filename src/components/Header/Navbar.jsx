@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, DollarSign, Gift, Star, Zap, Trophy, Users } from "lucide-react";
 
 
-const Navbar = () => {
+const Navbar = ({coins}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -61,7 +61,7 @@ const Navbar = () => {
           <div className="flex items-center  ">
             <button className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 bg-white/60 border border-white/40 rounded-xl hover:bg-white/80 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg cursor-pointer">
               <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-                0
+               {coins}
               </span>
               <div className="flex items-center gap-1 text-orange-600 font-semibold">
                 <span className="text-sm lg:text-base">Coin</span>

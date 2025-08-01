@@ -9,7 +9,7 @@ const Players = () => {
     <div className="max-w-6xl w-11/12 mt-16 mb-24 mx-auto  py-5 px-2 ">
       <div className="md:flex justify-between text-center  md:text-left items-center mb-4">
         {/* Left side title */}
-        <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-tight mb-6 md:mb-0 ">
+        <h3 className="text-3xl lg:text-3xl font-bold text-slate-800 leading-tight mb-6 md:mb-0 ">
           Available
           <span className="ml-2 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Players
