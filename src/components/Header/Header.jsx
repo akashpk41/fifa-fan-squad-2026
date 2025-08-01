@@ -19,7 +19,7 @@ const Header = ({ coins, setCoins }) => {
   // const [coins, setCoins] = useState(0);
 
   const handleClaimCredit = () => {
-    const creditCoins = Math.floor(1000000 + Math.random() * 9000000);
+    const creditCoins = Math.floor(100000 + Math.random() * 900000);
 
     setCoins(coins + creditCoins);
 

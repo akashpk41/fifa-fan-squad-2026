@@ -4,6 +4,8 @@ import PlayerCard from "../PlayerCard/PlayerCard";
 
 const Players = ({ coins, setCoins }) => {
   const [activeTab, setActiveTab] = useState("active");
+  const [selectedPlayer, setSelectedPlayer] = useState([]);
+  // console.log(selectedPlayer);
 
   return (
     <div className="max-w-6xl w-11/12 mt-16 mb-24 mx-auto  py-5 px-2 ">
@@ -36,15 +38,20 @@ const Players = ({ coins, setCoins }) => {
             } bg-white  font-semibold px-5 py-2 text-sm transition-all duration-300  flex-1 md:flex-none  cursor-pointer`}
             onClick={() => setActiveTab("selected")}
           >
-            Selected (0)
+            Selected ({selectedPlayer.length})
           </button>
         </div>
       </div>
 
       {activeTab === "active" ? (
-        <PlayerCard coins={coins} setCoins={setCoins} />
+        <PlayerCard
+          coins={coins}
+          setCoins={setCoins}
+          selectedPlayer={selectedPlayer}
+          setSelectedPlayer={setSelectedPlayer}
+        />
       ) : (
-        <SelectedPlayer />
+        <SelectedPlayer selectedPlayer={selectedPlayer} />
       )}
     </div>
   );

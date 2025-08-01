@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-const PlayerCard = ({ coins, setCoins }) => {
+const PlayerCard = ({ coins, setCoins, setSelectedPlayer, selectedPlayer }) => {
   const [players, setPlayers] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -45,6 +45,7 @@ const PlayerCard = ({ coins, setCoins }) => {
 
     setCoins((prev) => prev - player.price);
     // your additional logic (like marking player as owned)
+    setSelectedPlayer([player, ...selectedPlayer]);
   };
 
   return (
