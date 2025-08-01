@@ -1,12 +1,36 @@
-# React + Vite
+# ⚽ FIFA Fan Squad - React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **FIFA Fan Squad**, a fun and interactive player selection app built with **React + Vite**! Build your dream football squad by claiming credits and selecting your favorite players.
 
-Currently, two official plugins are available:
+🚀 **Live Site:** [fifa-fan-squad.surge.sh](https://fifa-fan-squad.surge.sh)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧠 Select up to 6 players for your squad
+- 💸 Claim free credit randomly (7-digit coins)
+- 🚫 Prevent duplicate selections
+- ❌ Remove any player from your squad
+- 🎉 Stylish toasts for feedback
+- 📱 Fully responsive & mobile-friendly
+
+---
+
+## ⚙️ Tech Stack
+
+- **React**
+- **Vite**
+- **Tailwind CSS**
+- **React Hot Toast**
+- **Surge (for deployment)**
+
+---
+
+## 🚀 Run Locally
+
+Clone the project:
+
+```bash
+git clone https://github.com/your-username/fifa-fan-squad.git
+cd fifa-fan-squad

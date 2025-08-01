@@ -132,12 +132,7 @@ const Header = ({ coins, setCoins }) => {
 
             <button className="flex items-center gap-2 px-6 py-4 bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl text-slate-700 font-semibold hover:bg-white/80 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer hover:shadow-xl">
               <Users className="w-5 h-5" />
-              <a
-                href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
-                target="_blank"
-              >
-                Join Tournament
-              </a>
+              Join Tournament
             </button>
           </div>
         </div>

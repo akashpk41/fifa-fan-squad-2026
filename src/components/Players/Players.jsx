@@ -5,6 +5,7 @@ import PlayerCard from "../PlayerCard/PlayerCard";
 const Players = ({ coins, setCoins }) => {
   const [activeTab, setActiveTab] = useState("active");
   const [selectedPlayer, setSelectedPlayer] = useState([]);
+
   // console.log(selectedPlayer);
 
   return (
@@ -52,6 +53,9 @@ const Players = ({ coins, setCoins }) => {
           </button>
         </div>
       </div>
+
+
+
 
       {activeTab === "active" ? (
         <PlayerCard
