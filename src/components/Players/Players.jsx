@@ -12,25 +12,21 @@ const Players = ({ coins, setCoins }) => {
       <div className="md:flex justify-between text-center  md:text-left items-center mb-4">
         {/* dynamically changing section text */}
 
-
-{
-   activeTab === "active" ?  <h3 className="text-3xl lg:text-3xl font-bold text-slate-800 leading-tight mb-6 md:mb-0 ">
-          Available
-          <span className="ml-2 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            Players
-          </span>
-        </h3> : <h3 className="text-3xl lg:text-3xl font-bold text-slate-800 leading-tight mb-6 md:mb-0 ">
-          Selected
-          <span className="ml-2 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-           Players({selectedPlayer.length}/6)
-          </span>
-        </h3>
-}
-
-
-
-
-
+        {activeTab === "active" ? (
+          <h3 className="text-3xl lg:text-3xl font-bold text-slate-800 leading-tight mb-6 md:mb-0 ">
+            Available
+            <span className="ml-2 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Players
+            </span>
+          </h3>
+        ) : (
+          <h3 className="text-3xl lg:text-3xl font-bold text-slate-800 leading-tight mb-6 md:mb-0 ">
+            Selected
+            <span className="ml-2 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Players({selectedPlayer.length}/6)
+            </span>
+          </h3>
+        )}
 
         {/* Right side toggle button style */}
         <div className=" flex   rounded-full border border-gray-300 overflow-hidden  ">
@@ -65,7 +61,11 @@ const Players = ({ coins, setCoins }) => {
           setSelectedPlayer={setSelectedPlayer}
         />
       ) : (
-        <SelectedPlayer selectedPlayer={selectedPlayer} />
+        <SelectedPlayer
+          selectedPlayers={selectedPlayer}
+          setActiveTab={setActiveTab}
+          setSelectedPlayer={setSelectedPlayer}
+        />
       )}
     </div>
   );

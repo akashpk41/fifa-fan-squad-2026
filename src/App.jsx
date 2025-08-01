@@ -12,7 +12,7 @@ function App() {
       <Header coins={coins} setCoins={setCoins} />
       <Players coins={coins} setCoins={setCoins} />
       <Toaster position="top-center" reverseOrder={false} />
-      {/* <ContactFooter /> */}
+      <ContactFooter />
     </>
   );
 }
