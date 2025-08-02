@@ -48,8 +48,8 @@ const Navbar = ({coins}) => {
             {["Home", "Fixture", "Teams", "Schedules"].map((link) => (
               <a
                 key={link}
-                href="#"
-                className="text-slate-700 font-medium hover:text-blue-600 transition-all duration-300 relative group px-2 py-1"
+
+                className="text-slate-700 font-medium hover:text-blue-600 transition-all duration-300 relative group cursor-pointer px-2 py-1"
               >
                 {link}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
